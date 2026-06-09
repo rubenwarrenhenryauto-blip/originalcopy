@@ -1,11 +1,3 @@
-import { redirect } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
-import { getDictionary } from '@/lib/dictionaries';
-import { getLandingContent, type Testimonial } from '@/lib/hygraph';
-import { createServiceClient } from '@/lib/supabase/server';
-import { i18n } from '@/i18n-config';
-import ZipChecker from '@/components/ZipChecker/ZipChecker';
 
 export const dynamic = 'force-dynamic';
 
