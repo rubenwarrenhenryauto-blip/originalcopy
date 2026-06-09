@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dtailwash | Mobile Car Detailing Miami",
+    default: "Dtailwash |Prueba Revert",
     template: "%s | Dtailwash",
   },
   description: "Professional mobile car detailing service in Miami. We come to you — book online in minutes.",
