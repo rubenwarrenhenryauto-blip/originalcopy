@@ -1,11 +1,3 @@
-import { redirect } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
-import { getDictionary } from '@/lib/dictionaries';
-import { getLandingContent, type Testimonial } from '@/lib/hygraph';
-import { createServiceClient } from '@/lib/supabase/server';
-import { i18n } from '@/i18n-config';
-import ZipChecker from '@/components/ZipChecker/ZipChecker';
 
 export const dynamic = 'force-dynamic';
 
@@ -105,7 +97,10 @@ export default async function LandingPage({
           ];
 
     const steps = [
-      
+        { number: '01', ...dict.home.howItWorks.step1, icon: '📍', image: stepImages[0]?.imageUrl },
+        { number: '02', ...dict.home.howItWorks.step2, icon: '🚐', image: stepImages[1]?.imageUrl },
+        { number: '03', ...dict.home.howItWorks.step3, icon: '☕', image: stepImages[2]?.imageUrl },
+    ];
 
     return (
         <div className="min-h-screen bg-[#131835] text-white overflow-x-hidden">
