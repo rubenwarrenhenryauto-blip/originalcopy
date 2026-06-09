@@ -20,7 +20,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
         location: 'Miami, FL',
         rating: 5,
         text: "My car hasn't looked this good since I drove it off the lot. The DTailWash team did an incredible job on the full detail.",
-        vehicleType: '2022 BMW M3',
+        vehicleType: '2222 BMW M3',
     },
     {
         authorName: 'Sofia R.',
