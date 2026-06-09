@@ -1,3 +1,11 @@
+import { redirect } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
+import { getDictionary } from '@/lib/dictionaries';
+import { getLandingContent, type Testimonial } from '@/lib/hygraph';
+import { createServiceClient } from '@/lib/supabase/server';
+import { i18n } from '@/i18n-config';
+import ZipChecker from '@/components/ZipChecker/ZipChecker';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,7 +20,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
         location: 'Miami, FL',
         rating: 5,
         text: "My car hasn't looked this good since I drove it off the lot. The DTailWash team did an incredible job on the full detail.",
-        vehicleType: '2222 BMW M3',
+        vehicleType: '2022 BMW M3',
     },
     {
         authorName: 'Sofia R.',
