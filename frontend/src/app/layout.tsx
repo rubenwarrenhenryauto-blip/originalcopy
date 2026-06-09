@@ -1,34 +1,16 @@
-import { Inter, Playfair_Display } from "next/font/google";
-import './globals.css';
-import { Providers } from './providers';
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
-        <Providers>
-          {children}
-        </Providers>
-      </body>
-    </html>
-  );
+export const metadata = {
+  title: {
+    default: 'Dtailwash | Mobile Car Detailing Miami',
+    template: '%s | Dtailwash',
+  },
+  description: 'Professional mobile car detailing service in Miami. We come to you. Book online in minutes.',
+  keywords: ['mobile car detailing', 'car detailing Miami', 'detailing a domicilio Miami'],
+  openGraph: {
+    title: 'Dtailwash | Mobile Car Detailing Miami',
+    description: 'Professional mobile car detailing service in Miami.',
+    url: 'https://dtailwash.com',
+    siteName: 'Dtailwash',
+    locale: 'en_US',
+    type: 'website',
+  },
 }
